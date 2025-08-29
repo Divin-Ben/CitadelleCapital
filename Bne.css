@@ -101,6 +101,64 @@ nav li a:before {
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
+/* ------------------------------------------------------------------ */
+/* RESPONSIVE DESIGN POUR TABLETTES (Largeur max 768px)          */
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+    /* Cachez la barre de navigation de bureau (si vous en avez une) */
+    .desktop-nav {
+        display: none;
+    }
+    
+    /* Le conteneur principal prend toute la largeur */
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Les éléments de la grille ou flexbox passent à une seule colonne */
+    .grid-container, .flex-container {
+        flex-direction: column;
+    }
+    
+    .grid-item, .flex-item {
+        width: 100%; /* L'élément prend toute la largeur */
+        margin-bottom: 15px;
+    }
+    
+    /* Les images deviennent plus petites */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* RESPONSIVE DESIGN POUR TÉLÉPHONES (Largeur max 480px)         */
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 480px) {
+    /* La taille du texte devient plus petite */
+    body {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+
+    /* Le menu burger ou mobile est affiché ici */
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Cachez le pied de page s'il est trop grand */
+    footer {
+        padding: 10px;
+    }
+    
+    .footer-links {
+        display: none;
+    }
+}
 
 nav li a:after {
   content: attr(data-content);
@@ -718,3 +776,4 @@ footer
 #mention{
   color: #797561;
 }
+
