@@ -20,12 +20,12 @@ body {
 
 hr {
   width: 30em;
-  margin: 0 auto; /* Utilise une méthode de centrage plus fiable */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
   font-size: 0.9em;
-  text-align: left; /* Règle l'alignement par défaut sur "left" pour la lisibilité */
 }
 
 a {
@@ -60,14 +60,20 @@ nav ul {
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  flex-direction: column; /* Assure un affichage vertical sur mobile */
 }
 
 nav ul li {
+  -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100%;
   overflow: hidden;
@@ -99,21 +105,25 @@ nav li a:before {
   top: 50%;
   left: 0;
   z-index: 100;
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   opacity: 0;
+  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
 nav li a:after {
   content: attr(data-content);
   font-size: 0.7rem;
+  -webkit-transition: all .2s linear;
   transition: all .2s linear;
   opacity: 0;
   position: absolute;
   z-index: 100;
   color: #fff;
   display: block;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   left: 0;
   right: 0;
   bottom: -50px;
@@ -125,11 +135,13 @@ nav li a:after {
 }
 
 nav li a:hover:before {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 }
 
 nav li a:hover:after {
+  -webkit-transform: translateY(15px);
   transform: translateY(15px);
   opacity: 1;
 }
@@ -156,6 +168,7 @@ nav li:nth-of-type(5) {
 
 /* Burger menu */
 .open-overlay {
+  position: -webkit-sticky;
   position: sticky;
   float: right;
   margin-right: 3.2em;
@@ -174,18 +187,293 @@ nav li:nth-of-type(5) {
   margin-top: 8px;
 }
 
-/* Animations... (Le reste de vos animations est conservé) */
+.animate-top-bar {
+  -webkit-animation: animate-top-bar .6s linear 1 both;
+  animation: animate-top-bar .6s linear 1 both;
+}
+
+.animate-bottom-bar {
+  -webkit-animation: animate-bottom-bar .6s linear 1 both;
+  animation: animate-bottom-bar .6s linear 1 both;
+}
+
+.animate-middle-bar {
+  -webkit-animation: animate-middle-bar .6s linear 1 both;
+  animation: animate-middle-bar .6s linear 1 both;
+}
+
+.animate-out-top-bar {
+  -webkit-animation: animate-out-top-bar .6s linear 1 both;
+  animation: animate-out-top-bar .6s linear 1 both;
+}
+
+.animate-out-bottom-bar {
+  -webkit-animation: animate-out-bottom-bar .6s linear 1 both;
+  animation: animate-out-bottom-bar .6s linear 1 both;
+}
+
+.animate-out-middle-bar {
+  -webkit-animation: animate-out-middle-bar .6s linear 1 both;
+  animation: animate-out-middle-bar .6s linear 1 both;
+}
+
+/* Animation keyframes */
+@-webkit-keyframes animate-top-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px);
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-top-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px);
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@-webkit-keyframes animate-bottom-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-bottom-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@-webkit-keyframes animate-middle-bar {
+  0% {
+    background-color: #fff;
+  }
+  80% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-middle-bar {
+  0% {
+    background-color: #fff;
+  }
+  80% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #29363B;
+  }
+}
+
+@-webkit-keyframes animate-out-top-bar {
+  0% {
+    background-color: #29363B;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px);
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-top-bar {
+  0% {
+    background-color: #29363B;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px);
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@-webkit-keyframes animate-out-bottom-bar {
+  0% {
+    background-color: #29363B;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-bottom-bar {
+  0% {
+    background-color: #29363B;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@-webkit-keyframes animate-out-middle-bar {
+  0% {
+    background-color: #29363B;
+  }
+  80% {
+    background-color: #29363B;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes animate-out-middle-bar {
+  0% {
+    background-color: #29363B;
+  }
+  80% {
+    background-color: #29363B;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
 
 /* Media query pour mobile (max-width: 640px) */
 @media (max-width: 640px) {
   nav ul {
     flex-direction: column;
   }
-  /* Le reste des styles pour mobile est conservé, mais j'ai ajouté quelques améliorations ici */
+  nav ul li {
+    height: 20%;
+  }
+  nav ul li a {
+    font-size: 11px;
+  }
+  nav li a:after {
+    font-size: 0.6rem;
+    bottom: -25px;
+  }
+  nav li a:hover:after {
+    transform: translateY(0);
+  }
+  .open-overlay {
+    right: 1rem;
+  }
+  nav li a:before {
+    width: 25px;
+  }
+  .logo {
+    width: 100px;
+  }
+  #imgProfile {
+    width: 180px;
+    height: 180px;
+  }
+  #logo {
+    height: 3em;
+    width: 5em;
+    margin: 0 auto;
+    display: block;
+  }
+  #end {
+    padding-left: 0;
+    text-align: center;
+    line-height: normal;
+    padding-top: 10px;
+  }
   #sectionProfile p {
     padding: 0 10px;
-    text-align: justify; /* Vous pouvez justifier ici pour un look plus soigné sur mobile */
+    text-align: left;
   }
+  /* Correction pour les icônes sociales sur mobile */
   .social-icons {
     display: flex;
     justify-content: center;
@@ -197,11 +485,7 @@ nav li:nth-of-type(5) {
     height: 2.2em;
     width: 2.2em;
   }
-  .open-overlay {
-    margin-right: 1.5em; /* Ajuste la marge pour éviter le débordement */
-  }
 }
-
 
 /* ====================================
 home
@@ -479,7 +763,6 @@ home
   color: white;
   text-align: center;
   padding: 20px 0;
-  width: 100%;
 }
 
 #logo {
@@ -512,10 +795,10 @@ footer
   height: 10vh;
   background-color: black;
   line-height: 10vh;
-  padding: 0;
+  padding-left: 0;
   text-align: center;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #mention {
