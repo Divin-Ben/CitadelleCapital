@@ -1,6 +1,10 @@
 /* ====================================
 Generale style
 ==================================== */
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Minimal";
   src: url('./minimal.ttf');
@@ -9,7 +13,6 @@ Generale style
 body {
   font-family: sans-serif;
   background-color: #FCFCFC;
-  overflow-X: hidden;
 }
 
 .btn,
@@ -278,90 +281,6 @@ nav li:nth-of-type(5) {
 
 @keyframes animate-bottom-bar {
   0% {
-    background-color: #fff;
-  }
-  50% {
-    -webkit-transform: translateY(-9px);
-    transform: translateY(-9px)
-  }
-  80% {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-    background-color: #fff;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    background-color: #29363B;
-  }
-}
-
-@-webkit-keyframes animate-middle-bar {
-  0% {
-    background-color: #fff;
-  }
-  80% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: #29363B;
-  }
-}
-
-@keyframes animate-middle-bar {
-  0% {
-    background-color: #fff;
-  }
-  80% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: #29363B;
-  }
-}
-
-@-webkit-keyframes animate-out-top-bar {
-  0% {
-    background-color: #29363B;
-  }
-  50% {
-    -webkit-transform: translateY(9px);
-    transform: translateY(9px)
-  }
-  80% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-    background-color: #29363B
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    background-color: #FFF;
-  }
-}
-
-@keyframes animate-out-top-bar {
-  0% {
-    background-color: #29363B
-  }
-  50% {
-    -webkit-transform: translateY(9px);
-    transform: translateY(9px)
-  }
-  80% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-    background-color: #29363B
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    background-color: #FFF;
-  }
-}
-
-@-webkit-keyframes animate-out-bottom-bar {
-  0% {
     background-color: #29363B
   }
   50% {
@@ -377,38 +296,6 @@ nav li:nth-of-type(5) {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     background-color: #FFF;
-  }
-}
-
-@keyframes animate-out-bottom-bar {
-  0% {
-    background-color: #29363B
-  }
-  50% {
-    -webkit-transform: translateY(-9px);
-    transform: translateY(-9px)
-  }
-  80% {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-    background-color: #29363B;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    background-color: #FFF;
-  }
-}
-
-@-webkit-keyframes animate-out-middle-bar {
-  0% {
-    background-color: #29363B;
-  }
-  80% {
-    background-color: #29363B;
-  }
-  100% {
-    background-color: #fff;
   }
 }
 
@@ -470,6 +357,9 @@ nav li:nth-of-type(5) {
     text-align: center;
     line-height: normal;
     padding-top: 10px;
+  }
+  #sectionProfile p {
+    padding: 0 10px;
   }
 }
 
@@ -550,13 +440,6 @@ home
   height: 100vh;
   width: 100vw;
   color: #000000;
-}
-
-.facebook {
-  margin-top: 5em;
-  margin-left: 3em;
-  height: 2.2em;
-  width: 2.2em;
 }
 
 .jumbotron {
@@ -655,7 +538,7 @@ home
 /* Section "Profile" */
 #sectionProfile {
   margin-top: 5%;
-  text-align: center; /* Assure le centrage du texte et des éléments inline */
+  text-align: center;
 }
 
 /* Style du paragraphe dans la section Profil pour une meilleure lisibilité */
