@@ -2,29 +2,37 @@
 Generale style
 ==================================== */
 @font-face {
- font-family: "Minimal";
- src: url('./minimal.ttf');
+  font-family: "Minimal";
+  src: url('./minimal.ttf');
 }
-body{
+
+body {
   font-family: sans-serif;
   background-color: #FCFCFC;
   overflow-X: hidden;
 }
-.btn, .card{
+
+.btn,
+.card {
   border-radius: 0 !important;
 }
-hr{
+
+hr {
   width: 30em;
 }
-p{
+
+p {
   font-size: 0.9em;
 }
-a{
+
+a {
   color: white;
 }
-a:hover{
+
+a:hover {
   color: white;
 }
+
 /* ====================================
 Navigation
 ==================================== */
@@ -156,9 +164,7 @@ nav li:nth-of-type(5) {
   background-color: #0b0b0b
 }
 
-
 /* Burger menu */
-
 .open-overlay {
   position: -webkit-sticky;
   position: sticky;
@@ -209,9 +215,7 @@ nav li:nth-of-type(5) {
   animation: animate-out-middle-bar .6s linear 1 both
 }
 
-
 /* Animation keyframes */
-
 @-webkit-keyframes animate-top-bar {
   0% {
     background-color: #fff;
@@ -419,6 +423,8 @@ nav li:nth-of-type(5) {
     background-color: #fff;
   }
 }
+
+/* Media query pour mobile (max-width: 640px) */
 @media (max-width: 640px) {
   nav ul {
     -webkit-box-orient: vertical;
@@ -438,7 +444,7 @@ nav li:nth-of-type(5) {
   }
   nav li a:hover:after {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   .open-overlay {
     right: 1rem;
@@ -446,72 +452,91 @@ nav li:nth-of-type(5) {
   nav li a:before {
     width: 25px;
   }
+  .logo {
+    width: 100px;
+  }
+  #imgProfile {
+    width: 180px;
+    height: 180px;
+  }
+  #logo {
+    height: 3em;
+    width: 5em;
+    margin: 0 auto;
+    display: block;
+  }
+  #end {
+    padding-left: 0;
+    text-align: center;
+    line-height: normal;
+    padding-top: 10px;
+  }
 }
 
 /* ====================================
 home
 ==================================== */
-
 /* Styles pour le logo */
 .logo-container {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    z-index: 10;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 10;
 }
 
 .logo {
-    width: 150px;
-    height: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
-
 
 /* Style et animation du titre */
 .animated-text {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInScale 2s ease-out forwards;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInScale 2s ease-out forwards;
 }
+
 @keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
 .animated-text {
-    background: linear-gradient(90deg, #faf9f9, #f5f4f4, #f0f0ec, #fdfafa, #090909, #f7f7f9, #ede9ed, black);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: color-animation 5s infinite;
-    background-size: 200%;
+  background: linear-gradient(90deg, #faf9f9, #f5f4f4, #f0f0ec, #fdfafa, #090909, #f7f7f9, #ede9ed, black);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: color-animation 5s infinite;
+  background-size: 200%;
 }
 
 @keyframes color-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 /*-- every section--*/
-
-.title{
+.title {
   color: #459C69;
   font-size: 1.5em;
 }
+
 /* first page */
 #home {
-  background-image: url("./What-is-Financial-Management.jpg.optimal (1).jpg") ;
+  background-image: url("./What-is-Financial-Management.jpg.optimal (1).jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -519,203 +544,230 @@ home
   width: 100vw;
   margin-top: -30px;
 }
-.background{
-  background: rgba(0,0,0,0.3);
-  height:100vh;
+
+.background {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
   width: 100vw;
   color: #000000;
 }
-.facebook{
+
+.facebook {
   margin-top: 5em;
   margin-left: 3em;
   height: 2.2em;
   width: 2.2em;
 }
-.jumbotron{
-  background: rgba(0,0,0,0.0);
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.0);
   color: white;
   margin-top: 10%;
 }
-#firstImageHome{
-  background-image: url("./1d966dd1613dce75cdb0661a6997d23f.jpg") ;
+
+#firstImageHome {
+  background-image: url("./1d966dd1613dce75cdb0661a6997d23f.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
 }
+
 /* --presentation-- */
-.black{
+.black {
   background-color: #000000;
   color: #ffffff;
 }
-.white{
+
+.white {
   background-color: #ffffff;
 }
-.firstButton{
-  color:  #459C69;
+
+.firstButton {
+  color: #459C69;
 }
-.rowSectionMethod{
+
+.rowSectionMethod {
   height: 100vh;
   color: white;
 }
-.colSectionMethod{
+
+.colSectionMethod {
   margin-top: 25%;
   margin-left: 18%;
   margin-right: 18%;
 }
-.textSectionMethod{
+
+.textSectionMethod {
   margin-left: 18%;
   margin-right: 18%;
 }
-.imgMethod{
-  background-image: url("./1d966dd1613dce75cdb0661a6997d23f.jpg") ;
+
+.imgMethod {
+  background-image: url("./1d966dd1613dce75cdb0661a6997d23f.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 50vw;
 }
-#backgroundImgMethod{
+
+#backgroundImgMethod {
   height: 100vh;
   width: 50vw;
   margin-left: -10px;
   background: rgba(0, 0, 0, 0.3);
 }
-.method{
+
+.method {
   height: 100vh;
   width: 50vw;
 }
 
 /*-- section: reason for consultation */
-
-.firstIcon{
+.firstIcon {
   margin-top: 30%;
   font-size: 1.5em;
   color: rgb(249, 246, 246);
 }
-.firstPartReason{
+
+.firstPartReason {
   background-color: black;
   color: white;
   height: 80vh;
 }
-.secondPartReason{
+
+.secondPartReason {
   background-color: #FAF7F4;
   color: rgb(10, 10, 10);
   height: 80vh;
 }
-.theerPartReason{
+
+.theerPartReason {
   background-color: #282828;
   color: white;
   height: 80vh;
 }
-.text{
+
+.text {
   margin-left: 15%;
 }
- /* Section "Profile" */
-    #sectionProfile {
-        margin-top: 5%;
-    }
 
-    #imgProfile {
-        width: 250px;
-        height: 250px;
-    }
+/* Section "Profile" */
+#sectionProfile {
+  margin-top: 5%;
+  text-align: center; /* Assure le centrage du texte et des éléments inline */
+}
 
-    
-.buttonProfile{
+/* Style du paragraphe dans la section Profil pour une meilleure lisibilité */
+#sectionProfile p {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+#imgProfile {
+  background-image: url("./profil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.buttonProfile {
   font-size: 1.1em;
   height: 4em;
   width: 10em;
   background-color: #459C69;
   color: white;
 }
-#imgProfile{
-  background-image: url("./profil.jpg") ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
 
-  /*-- section: consulting */
-.black{
+/*-- section: consulting */
+.black {
   color: white;
   background-color: black;
   height: 50vh;
 }
-.white{
+
+.white {
   color: black;
   background-color: white;
   height: 50vh;
 }
-.paragraph{
+
+.paragraph {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 15%;
 }
-#imageConsulting{
-  background-image: url("./b13df08c0e7690475537feaa0ac9419dcopie.jpg") ;
+
+#imageConsulting {
+  background-image: url("./b13df08c0e7690475537feaa0ac9419dcopie.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-#backgroundImgConsulting{
-  background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.5), rgba(245,245,245, 0.1));
+
+#backgroundImgConsulting {
+  background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.5), rgba(245, 245, 245, 0.1));
 }
-#secondImageConsulting{
-  background-image: url("./65800e015d49fa3a1887a6e10fba3babcopie.jpg") ;
+
+#secondImageConsulting {
+  background-image: url("./65800e015d49fa3a1887a6e10fba3babcopie.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: -15px;
 }
-#backgroundImgConsultingTwo{
-  background: linear-gradient(0.25turn, rgba(245,245,245, 0.1), rgba(0, 0, 0, 0.5));
+
+#backgroundImgConsultingTwo {
+  background: linear-gradient(0.25turn, rgba(245, 245, 245, 0.1), rgba(0, 0, 0, 0.5));
 }
-.sizing{
+
+.sizing {
   width: 50vw;
   height: 50vh;
 }
+
 /*-- section: contact */
-#contact{
- background-color: #0F0F0F;
- color: white;
+#contact {
+  background-color: #0F0F0F;
+  color: white;
 }
-#logo{
+
+#logo {
   height: 5em;
   width: 8em;
   margin-left: 46.5vw;
   margin-top: 3em;
 }
-.icon{
-  color:  #459C69;
+
+.icon {
+  color: #459C69;
   background-color: #212121;
   border-radius: 100%;
-  border:  10px solid  #212121;
+  border: 10px solid #212121;
 }
 
 /* ====================================
 page: mention
 ==================================== */
-
-.mention{
+.mention {
   padding: 1em;
   font-size: 1.8em;
 }
 
-
-
 /* ====================================
 footer
 ==================================== */
-
-#end{
+#end {
   height: 10vh;
   background-color: black;
   line-height: 10vh;
   white-space: nowrap;
   padding-left: 46.5vw;
 }
-#mention{
+
+#mention {
   color: #797561;
 }
