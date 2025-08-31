@@ -198,7 +198,7 @@ nav li:nth-of-type(5) {
   }
   #sectionProfile p {
     padding: 0 10px;
-    text-align: justify;
+    text-align: center;
   }
   .social-icons {
     display: flex;
@@ -210,6 +210,26 @@ nav li:nth-of-type(5) {
     margin: 0 10px;
     height: 2.2em;
     width: 2.2em;
+  }
+
+  /* Ajustements spécifiques pour la section contact sur mobile */
+  #contact h3, #contact p {
+    padding: 0 10px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  #contact .contact-item {
+    padding: 10px 0;
+    width: 100%;
+  }
+  #contact .icon-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  #contact .icon {
+      margin-bottom: 10px;
   }
 }
 
@@ -411,7 +431,7 @@ home
   margin: 0 auto;
   max-width: 800px;
   padding: 0 15px;
-  text-align: center; /* Centrage du paragraphe */
+  text-align: center;
   line-height: 1.6;
 }
 
@@ -490,20 +510,44 @@ home
   text-align: center;
   padding: 20px 0;
   width: 100%;
+  overflow: hidden;
 }
 
-#logo {
-  height: 5em;
-  width: 8em;
-  margin: 3em auto 0 auto;
-  display: block;
+#contact h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    word-wrap: break-word;
 }
 
-.icon {
+#contact h3 {
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    word-wrap: break-word;
+}
+
+#contact p {
+    font-size: 1em;
+    padding: 0 15px;
+    word-wrap: break-word;
+}
+
+#contact .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#contact .icon {
   color: #459C69;
   background-color: #212121;
-  border-radius: 100%;
-  border: 10px solid #212121;
+  border-radius: 50%; /* Assure que c'est bien un cercle */
+  padding: 10px; /* Remplace la bordure par un padding pour éviter le débordement */
+  margin-bottom: 10px;
+  font-size: 3em;
 }
 
 /* ====================================
